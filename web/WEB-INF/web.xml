@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/javaee"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+		  http://java.sun.com/xml/ns/javaee/web-app_3_1.xsd"
+           version="3.0">
+    <servlet>
+        <servlet-name>LoginServ</servlet-name>
+        <servlet-class>LoginServ</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LoginServ</servlet-name>
+        <url-pattern>/LoginServ</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Logout</servlet-name>
+        <servlet-class>Logout</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Logout</servlet-name>
+        <url-pattern>/Logout</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>PlaceOrder</servlet-name>
+        <servlet-class>PlaceOrder</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>PlaceOrder</servlet-name>
+        <url-pattern>/PlaceOrder</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>HomeServlet</servlet-name>
+        <servlet-class>HomeServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>HomeServlet</servlet-name>
+        <url-pattern>/HomeServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>SparePartsServ</servlet-name>
+        <servlet-class>SparePartsServ</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SparePartsServ</servlet-name>
+        <url-pattern>/SparePartsServ</url-pattern>
+    </servlet-mapping>
+</web-app>

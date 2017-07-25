@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html5 lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Home</title>
+    </head>
+
+    <script src="//code.jquery.com/jquery.min.js"></script>
+    <script>
+        $.get("nav.html", function(data){
+            $("#nav-placeholder").replaceWith(data);
+        });
+    </script>
+    <style>
+        .scroll {
+            /*overflow: auto;*/
+            height: 80%;
+            padding: 20%;
+            margin-top: 5%;
+            margin-left: 25%;
+            /*margin-right: 50%*/;
+        }
+    </style>
+    <body>
+
+    <header>
+        <div id="nav-placeholder"></div>
+    </header>
+    <form action="HomeServlet" class="scroll">
+        Username<br>
+        <input type="text" id="bo_un" name="bo_un"><br>
+        <input type="submit" value="Block!">
+    </form>
+
+    </body>
+</html5>

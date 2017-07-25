@@ -1,0 +1,109 @@
+<!--<!DOCTYPE html>
+<html5 lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+</head>
+<body>-->
+<style>
+    #navbar{
+        position:relative;
+        width:100px;
+        height:auto;
+        background-color: #eee;
+    }
+    ul{
+        background: #82C600;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        overflow: auto;
+    }
+    li{
+        /*display: inline;*/
+        float: left;
+        /*width: 100%;
+        height: 100%;*/
+
+    }
+    /* form{
+         float: right;
+         bottom: 0;
+         align-content: stretch;
+         padding: 6px 10px;
+     }
+     form a{
+         color: #fff;
+         display: block;
+
+         text-align: match-parent;
+         text-decoration: none;
+         height: 100%;
+         background-color: #82C600;
+     }*/
+    #nav_atyle{color: #fff;
+        display: inline-block;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        background-color: #82C600;}
+    li a {
+        color: #fff;
+        display: inline-block;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        background-color: #82C600;
+    }
+
+    li a:hover {
+        background-color: #82F000;
+    }
+    .active {
+        background-color: #82F000;
+    }
+</style>
+<script>
+    function onClick(x) {
+        console.log(x);
+        /*for(var i =0;i<5;i++){
+            var y = i;
+            if(i!=parseInt(x))
+                document.getElementById(y).style.cssText = 'background-color:#82C600';
+            else
+                document.getElementById(i).style.cssText = 'background-color:#82F000';
+        }*/
+        switch(parseInt(x)){
+            case 4:document.getElementById(4).style.cssText = 'background-color:#82F000';
+                document.getElementById(5).style.cssText = 'background-color:#82C600';
+                break;
+            default:document.getElementById(5).style.cssText = 'background-color:#82F000';
+                document.getElementById(4).style.cssText = 'background-color:#82C600';
+        }
+        //(document.getElementById(x)).style.cssText = 'background-color:#82F000';
+    }
+</script>
+<!--<header>-->
+<nav id="primary-menu" class="navbar" >
+    <ul >
+
+        <li ><a href="PlaceOrders.jsp" onclick="onClick('4');" id="4">Place Orders</a></li>
+        <li><a href="AddSpareParts.jsp" onclick="onClick('5')" id =5">Add Spare Parts</a></li>
+        <li><div id ="nav_div"></div></li>
+        <l1><a href="Logout" style="color: #fff;
+            display: inline-block;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            background-color: #82C600;
+            float: right" >Log Out</a></l1>
+    </ul>
+</nav>
+<!--</header>-->
+<!--
+</body>
+</html5>-->

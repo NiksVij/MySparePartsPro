@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html5 lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+</head>
+
+    <script src="//code.jquery.com/jquery.min.js"></script>
+    <script>
+        $.get("nav.html", function(data){
+            $("#nav-placeholder").replaceWith(data);
+        });
+
+
+    </script>
+
+    <body>
+
+    <header>
+        <div id="nav-placeholder"></div>
+    </header>
+    <div id = content></div>
+
+</body>
+</html5>
