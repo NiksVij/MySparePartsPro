@@ -8,9 +8,7 @@ import entities.Vehicle;
 import java.sql.*;
 import java.util.List;
 
-/**
- * Created by prajapas on 7/13/2017.
- */
+
 public class SparePartsDaoImpl implements SparePartsDao {
 
     public List<SpareParts> getAllSpareParts() {
@@ -87,9 +85,42 @@ public class SparePartsDaoImpl implements SparePartsDao {
         //return null;
     }
 
-    public boolean removeSpareParts(SpareParts id, int number) {
+    public boolean removeSpareParts(String id) {
+            //String sql="UPDATE spareparts SET units = units -1 WHERE (sparepartid='tyre786' AND units>0);";
+        Connection con = null;
+        PreparedStatement ps = null;
+        //ResultSet rs = null;
+        try{
+            con = JDBCHelper.getConnection();
+            con.setAutoCommit(false);
+            SpareParts sp = findSparePart(id);
+            if(sp == null) {
+                System.out.println("sp id not found");
+                return false;
+            }
+            else{
+                String sql="update spareparts set units = units -1 where (sparepartid = ? and units>0);";
 
-        return false;
+                //String sql = "update spareparts set price = ?, tax = ?, units = ? where sparepartId = ?";
+                ps = con.prepareStatement(sql);
+
+                ps.setString(1, id);
+                int i=ps.executeUpdate();
+                con.commit();
+                System.out.println("sp i: "+ i);
+                if(i==1)
+                    return true;
+                else
+                    return false;
+            }
+        } catch (SQLException e) {
+            System.out.println("OOPs error occured in connecting database " + e.getMessage());
+            return false;
+        } finally {
+            //JDBCHelper.close(rs);
+            JDBCHelper.close(ps);
+            JDBCHelper.close(con);
+        }
     }
 
     public SpareParts findSparePart(String sparePartId) {

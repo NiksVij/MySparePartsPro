@@ -45,7 +45,7 @@
          height: 100%;
          background-color: #82C600;
      }*/
-    #nav_atyle{color: #fff;
+    #nav_style{color: #fff;
         display: inline-block;
         text-align: center;
         padding: 14px 16px;
@@ -80,9 +80,15 @@
         switch(parseInt(x)){
             case 4:document.getElementById(4).style.cssText = 'background-color:#82F000';
                 document.getElementById(5).style.cssText = 'background-color:#82C600';
+                document.getElementById(6).style.cssText = 'background-color:#82C600';
                 break;
-            default:document.getElementById(5).style.cssText = 'background-color:#82F000';
+            case 5:document.getElementById(5).style.cssText = 'background-color:#82F000';
                 document.getElementById(4).style.cssText = 'background-color:#82C600';
+                document.getElementById(6).style.cssText = 'background-color:#82C600';
+                break;
+            default:document.getElementById(6).style.cssText = 'background-color:#82F000';
+                document.getElementById(4).style.cssText = 'background-color:#82C600';
+                document.getElementById(5).style.cssText = 'background-color:#82C600';
         }
         //(document.getElementById(x)).style.cssText = 'background-color:#82F000';
     }
@@ -93,14 +99,15 @@
 
         <li ><a href="PlaceOrders.jsp" onclick="onClick('4');" id="4">Place Orders</a></li>
         <li><a href="AddSpareParts.jsp" onclick="onClick('5')" id =5">Add Spare Parts</a></li>
+        <li><a href="RemoveSpareParts.jsp" onclick="onClick('6');" id =6">Remove Spare Parts</a></li>
         <li><div id ="nav_div"></div></li>
-        <l1><a href="Logout" style="color: #fff;
+        <li><a href="Logout" style="color: #fff;
             display: inline-block;
             text-align: center;
             padding: 14px 16px;
             text-decoration: none;
             background-color: #82C600;
-            float: right" >Log Out</a></l1>
+            float: right" >Log Out</a></li>
     </ul>
 </nav>
 <!--</header>-->
