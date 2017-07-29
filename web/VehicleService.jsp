@@ -85,6 +85,9 @@
         border-color: #000;
         border-radius: 5%;
     }
+    marquee{
+        margin:5%;
+    }
     td:nth-child(even) {
        text-align: right;
     }
@@ -98,8 +101,7 @@
     <div id="nav-placeholder"></div>
 </header>
 <
-<marquee><img src="img/cdk_logo.png" alt="CDK_logo"></marquee>
-<h2 align="center">Vehicle</h2>
+<h2 align="center">Vehicle Services</h2>
 <form action="VehicleService.jsp" style="text-align: left" method="post">
     <table>
         <th align="center">Vehicle Details</th>
@@ -115,5 +117,6 @@
         <tr><td></td>    <td><input type="submit" value="Submit">  </td>      </tr>
     </table>
 </form>
+<marquee><img src="img/cdk_logo.png" alt="CDK_logo"></marquee>
 </body>
 </html>
