@@ -38,12 +38,12 @@
         if(op != null){
             //Work under process
 
-            /*System.out.println("operation not null");
+            System.out.println("operation not null");
             if(op.equals("Action Successful"))
             out.print("<script>alert('action done');</script>");
             else{
                 out.print("<script>alert('unable to perform operation at database side');</script>");
-            }*/
+            }
         }
         /*else {System.out.println("operation null");
             out.print("<script>alert('action failed due to bad server');</script>");

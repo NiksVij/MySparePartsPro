@@ -70,7 +70,7 @@
 <script>
     function onClick(x) {
         console.log(x);
-        for(var i =0;i<6;i++){
+        for(var i =0;i<7;i++){
             var y = i.toString();
             if(i!=parseInt(x))
                 document.getElementById(y).style.cssText = 'background-color:#82C600';
@@ -110,6 +110,7 @@
             <li ><a href="PlaceOrders.jsp" onclick="onClick('4');" id="4">Place Orders</a></li>
             <li><a href="AddSpareParts.jsp" onclick="onClick('5');" id =5">Add Spare Parts</a></li>
             <li><a href="RemoveSpareParts.jsp" onclick="onClick('6');" id =6">Remove Spare Parts</a></li>
+            <li><a href="VehicleService.jsp" onclick="onClick('7')" id="7">Vehicle Service</a></li>
             <li><a href="Logout" style="color: #fff;
             display: inline-block;
             text-align: center;

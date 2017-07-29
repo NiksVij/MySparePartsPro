@@ -1,8 +1,5 @@
 package entities;
 
-/**
- * Created by prajapas on 7/13/2017.
- */
 public class Vehicle {
     private String vehicle_model;
     private int number;
